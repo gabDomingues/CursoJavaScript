@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Funções 4</title>
+
+		<script>
+				
+
+			function exibirArtigo(id, callbackSuc, callbackErro){
+				//lógica: recuperar o id via requisição http
+
+				if( true){
+					callbackSuc("Funções de CallBack em JS", "São muito utilizadas.")
+				}
+				else{
+					callbackErro("ERRO AO RECUPERAR OS DADOS!")
+				}
+			}
+
+			var callbackSuc = function(titulo, descricao){
+				document.write("<h1>"+ titulo+ "</h1>" )
+				document.write("<hr>" )
+				document.write("<p>"+ descricao+ "</p>" )
+
+			}
+			var callbackErro = function(erro){
+				document.write("<p>Erro: "+erro+"</p>" )
+			}
+			exibirArtigo(1,callbackSuc, callbackErro )  //nao usar ()
+
+
+		</script>
+		
+	</head>
+	<body>
+		
+
+	</body>
+</html>
